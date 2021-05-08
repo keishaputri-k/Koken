@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Koken</string>
+    <string name="txt_recipes_of_the_day">Recipes of the day</string>
+    <string name="txt_popular_recipes">Popular Recipes</string>
+    <string name="txt_creamy_broccoli_mac_and_cheese">Creamy Broccoli Mac and Cheese</string>
+    <string name="txt_image_view">Image View</string>
+    <string name="txt_recipe_name">Recipe Name</string>
+    <string name="txt_description">Description</string>
+    <string name="txt_1">1</string>
+    <string name="txt_20">20</string>
+    <string name="txt_vegan">Vegan</string>
 </resources>
