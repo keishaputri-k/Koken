@@ -24,7 +24,9 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_creamy_broccoli_mac_and_cheese"
             android:textSize="@dimen/_13sp"
+            android:textColor="@color/white"
             android:textAlignment="center"
+            android:background="@drawable/ic_text_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

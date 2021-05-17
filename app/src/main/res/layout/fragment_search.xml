@@ -3,18 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.SearchFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
-
+        android:layout_margin="@dimen/_20dp">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:text="Search Fragment" />
+            android:text="@string/txt_search"
+            android:textSize="@dimen/_24sp"
+            android:textColor="@color/main"
+            />
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            app:queryHint="@string/txt_hint_search"
+            android:layout_marginTop="@dimen/_15dp"
+            android:background="@drawable/search_background"
+            />
     </LinearLayout>
 </FrameLayout>

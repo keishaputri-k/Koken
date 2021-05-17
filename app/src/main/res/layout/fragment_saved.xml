@@ -3,18 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SavedFragment">
+    tools:context=".ui.SavedFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
-
+        android:layout_margin="@dimen/_20dp">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:text="Saved Fragment" />
+            android:text="@string/txt_search"
+            android:textSize="@dimen/_24sp"
+            android:textColor="@color/main"
+            />
+
     </LinearLayout>
 </FrameLayout>

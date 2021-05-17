@@ -9,4 +9,6 @@
     <string name="txt_1">1</string>
     <string name="txt_20">20</string>
     <string name="txt_vegan">Vegan</string>
+    <string name="txt_search">Search</string>
+    <string name="txt_hint_search">Search for recipes</string>
 </resources>
