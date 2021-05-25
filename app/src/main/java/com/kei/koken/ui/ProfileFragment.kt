@@ -4,10 +4,16 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil.setContentView
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.kei.koken.MainActivity
+import com.kei.koken.R
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment(), View.OnClickListener {
@@ -47,21 +53,18 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(p0: View) {
         when(p0.id) {
-//            com.google.firebase.database.R.id.tv_logout -> logOut()
+            R.id.tv_logout -> logOut()
         }
     }
 
-//    private fun logOut() {
+    private fun logOut() {
+        val intent = Intent(activity, LoginActivity::class.java)
+        activity?.startActivity(intent)
 //        startActivity(Intent(
 //            LoginActivity.getLaunchService(
-//                this
+//                activity
 //            )
 //        ))
-//        FirebaseAuth.getInstance().signOut()
-//    }
-//
-//    override fun onBackPressed() {
-//        super.onBackPressed()
-//        startActivity(Intent(MainActivity.getLaunchService(this)))
-//    }
+        FirebaseAuth.getInstance().signOut()
+    }
 }
