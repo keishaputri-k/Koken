@@ -1,4 +1,4 @@
-package com.kei.koken
+package com.kei.koken.ui
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,8 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.kei.koken.MainActivity
+import com.kei.koken.R
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.*
 
@@ -35,7 +37,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
         when (p0?.id) {
-            R.id.tv_sign_in -> startActivity(Intent(LoginActivity.getLaunchService(this)))
+            //R.id.tv_sign_in -> startActivity(Intent(LoginActivity.getLaunchService(this)))
             R.id.btn_signup -> signUpUser()
         }
     }
