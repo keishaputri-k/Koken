@@ -27,10 +27,18 @@ class MainActivity : AppCompatActivity() {
 
         addFragment(HomeFragment.newInstance())
         bottom_navigation.show(0)
-        bottom_navigation.add(MeowBottomNavigation.Model(0, R.drawable.ic_home))
-        bottom_navigation.add(MeowBottomNavigation.Model(1, R.drawable.ic_search))
-        bottom_navigation.add(MeowBottomNavigation.Model(2, R.drawable.ic_saved))
-        bottom_navigation.add(MeowBottomNavigation.Model(3, R.drawable.ic_profile))
+        bottom_navigation.add(MeowBottomNavigation.Model(0,
+            R.drawable.ic_home
+        ))
+        bottom_navigation.add(MeowBottomNavigation.Model(1,
+            R.drawable.ic_search
+        ))
+        bottom_navigation.add(MeowBottomNavigation.Model(2,
+            R.drawable.ic_saved
+        ))
+        bottom_navigation.add(MeowBottomNavigation.Model(3,
+            R.drawable.ic_profile
+        ))
 
         bottom_navigation.setOnClickMenuListener {
             when(it.id){
@@ -62,7 +70,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun addFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.add( R.id.fragment_container, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransition.add(R.id.fragment_container, fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
 }
 
