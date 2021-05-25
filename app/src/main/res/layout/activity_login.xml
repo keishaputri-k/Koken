@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/login_vector" />
+        app:srcCompat="@drawable/login_vector"
+        android:contentDescription="@string/image_view" />
 
     <TextView
         android:id="@+id/tv_login"
