@@ -43,23 +43,19 @@ class MainActivity : AppCompatActivity() {
         bottom_navigation.setOnClickMenuListener {
             when(it.id){
                 0 -> {
-//                    Toast.makeText(this@MainActivity, "Home Fragment", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Home Fragment", Toast.LENGTH_SHORT).show()
                     replaceFragment(HomeFragment.newInstance())
                 }
                 1 -> {
-//                    Toast.makeText(this@MainActivity, "Search Fragment", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Search Fragment", Toast.LENGTH_SHORT).show()
                     replaceFragment(SearchFragment.newInstance())
                 }
                 2 -> {
-//                    Toast.makeText(this@MainActivity, "Saved Fragment", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Saved Fragment", Toast.LENGTH_SHORT).show()
                     replaceFragment(SavedFragment.newInstance())
                 }
-                3 -> {
-//                    Toast.makeText(this@MainActivity, "Profile Fragment", Toast.LENGTH_SHORT).show()
-                    replaceFragment(ProfileFragment.newInstance())
-                }
                 else -> {
-                    Toast.makeText(this@MainActivity, "Empty Fragment", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Profile Fragment", Toast.LENGTH_SHORT).show()
                 }
             }
         }
