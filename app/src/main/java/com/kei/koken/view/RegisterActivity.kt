@@ -1,4 +1,4 @@
-package com.kei.koken.ui
+package com.kei.koken.view
 
 import android.content.Context
 import android.content.Intent

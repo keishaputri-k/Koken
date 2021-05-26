@@ -7,7 +7,10 @@ import retrofit2.http.QueryMap
 
 interface FoodRecipesApi {
 
-    @GET("/recipes/complexSearch")
+    //cek structure Gson
+    //pastiin Npiont
+
+    @GET("/recipes/random")
     suspend fun getRecipes(
         @QueryMap queries: Map<String, String>
     ): Response<FoodRecipe>

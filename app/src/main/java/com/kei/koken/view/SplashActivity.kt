@@ -1,14 +1,9 @@
-package com.kei.koken.ui
+package com.kei.koken.view
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.firebase.auth.FirebaseAuth
-import com.kei.koken.MainActivity
 import com.kei.koken.R
 
 class SplashActivity : AppCompatActivity() {

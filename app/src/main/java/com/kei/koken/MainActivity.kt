@@ -7,10 +7,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
-import com.kei.koken.ui.HomeFragment
-import com.kei.koken.ui.ProfileFragment
-import com.kei.koken.ui.SavedFragment
-import com.kei.koken.ui.SearchFragment
+import com.kei.koken.view.home.HomeFragment
+import com.kei.koken.view.SavedFragment
+import com.kei.koken.view.SearchFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

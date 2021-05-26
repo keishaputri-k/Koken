@@ -1,4 +1,4 @@
-package com.kei.koken.ui
+package com.kei.koken.view
 
 import android.app.ProgressDialog
 import android.content.Context

@@ -1,4 +1,4 @@
-package com.kei.koken.ui
+package com.kei.koken.view.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

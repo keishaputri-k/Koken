@@ -1,4 +1,4 @@
-package com.kei.koken.ui
+package com.kei.koken.view.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
