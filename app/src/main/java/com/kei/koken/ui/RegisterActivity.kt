@@ -37,7 +37,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
         when (p0?.id) {
-            R.id.tv_sign_in -> startActivity(Intent(LoginActivity.getLaunchService(this)))
+            //R.id.tv_sign_in -> startActivity(Intent(LoginActivity.getLaunchService(this)))
             R.id.btn_signup -> signUpUser()
         }
     }
