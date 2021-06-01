@@ -19,6 +19,10 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         fun getLaunchService (from: Context) = Intent(from, ProfileFragment::class.java).apply{
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
+        fun newInstance() =
+            ProfileFragment().apply {
+                arguments = Bundle().apply {}
+            }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

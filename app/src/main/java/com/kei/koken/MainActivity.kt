@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
+import com.kei.koken.view.ProfileFragment
 import com.kei.koken.view.home.HomeFragment
 import com.kei.koken.view.SavedFragment
 import com.kei.koken.view.SearchFragment
@@ -52,6 +53,10 @@ class MainActivity : AppCompatActivity() {
                 2 -> {
                     Toast.makeText(this@MainActivity, "Saved Fragment", Toast.LENGTH_SHORT).show()
                     replaceFragment(SavedFragment.newInstance())
+                }
+                3 -> {
+                    Toast.makeText(this@MainActivity, "Profile Fragment", Toast.LENGTH_SHORT).show()
+                    replaceFragment(ProfileFragment.newInstance())
                 }
                 else -> {
                     Toast.makeText(this@MainActivity, "Profile Fragment", Toast.LENGTH_SHORT).show()
