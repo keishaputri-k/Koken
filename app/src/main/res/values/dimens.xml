@@ -25,4 +25,5 @@
     <dimen name="_16dp">16dp</dimen>
     <dimen name="_150dp">150dp</dimen>
     <dimen name="_25dp">25dp</dimen>
+    <dimen name="_350dp">350dp</dimen>
 </resources>
