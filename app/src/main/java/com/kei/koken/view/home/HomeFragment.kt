@@ -13,6 +13,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kei.koken.adapter.RecipesAdapter
 import com.kei.koken.databinding.FragmentHomeBinding
@@ -29,7 +30,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
 
-    //private val args by navArgs<RecipesFragmentArgs>()
+//    private val args by navArgs<RecipesFragmentArgs>()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -60,8 +61,9 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
 
         setupRecyclerView()
 
-        recipesViewModel.readBackOnline.observe(viewLifecycleOwner) {
-            recipesViewModel.backOnline = it }
+        recipesViewModel.readBackOnline.observe(viewLifecycleOwner, {
+            recipesViewModel.backOnline = it
+        })
 
         lifecycleScope.launch {
             networkListener = NetworkListener()
@@ -106,11 +108,11 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
     private fun readDatabase() {
         lifecycleScope.launch {
             mainViewModel.readRecipes.observeOnce(viewLifecycleOwner, { database ->
-                if (database.isNotEmpty()) {
-                    Log.d("RecipesFragment", "readDatabase called!")
+                if (database.isNotEmpty()){
+                    Log.d("HomeFragment", "readDatabase Called!")
                     mAdapter.setData(database[0].foodRecipe)
                     hideShimmerEffect()
-                } else {
+                }else{
                     requestApiData()
                 }
             })
@@ -118,7 +120,7 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
     }
 
     private fun requestApiData() {
-        Log.d("RecipesFragment", "requestApiData called!")
+        Log.d("HomeFragment", "requestApiData called!")
         mainViewModel.getRecipes(recipesViewModel.applyQueries())
         mainViewModel.recipesResponse.observe(viewLifecycleOwner) { response ->
             when (response) {
